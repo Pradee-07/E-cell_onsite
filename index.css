@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+}
+
+body {
+    background: linear-gradient(to bottom right, #FAF3F0, #FDFDFD);
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #1F1F1F;
+    background-image: url("img/bg.avif");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    color: #2C2C2C;
+    width: 100%;
+    height: 75px;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Playfair Display', serif;
+}
+
+#logo {
+    font-size: xxx-large;
+    padding: 10% 25%;
+    color: #fff2d0;
+    margin-top: 10%;
+    margin-left: 20px;
+}
+
+.redirect {
+    display: flex;
+    margin-right: 30px;
+}
+
+.link {
+    text-decoration: none;
+    padding: 20px;
+    color: #2C2C2C;
+    font-weight: 500;
+}
+
+.link:hover {
+    color: #FFD8A9;
+    transform: scale(1.05);
+}
+
+.maintext {
+    text-align: center;
+    opacity: 0;
+    transform: translateX(200%);
+    animation: appear 1.5s forwards;
+    padding: 1%;
+}
+
+.hero {
+    margin-top: 15%;
+    color: #2C2C2C;
+    font-size: x-large;
+    font-family: 'Playfair Display', serif;
+}
+
+.me {
+    border-radius: 50%;
+    height: 250px;
+    display: block;
+    margin: 50px auto;
+}
+#me1{
+    border-radius: 50%;
+    height: 300px;
+    display: block;
+    margin: 50px auto;
+    width: 240px;
+}
+
+#about_me {
+    margin: 20% 2%;
+    padding: 5% 20%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    color: #1F1F1F;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.conatiner {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    margin: 2%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(10px);
+    margin: 3%;
+    color: #1F1F1F;
+    padding: 4%;
+    width: 33.33%;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-left: 4px solid #BFA2DB;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.card p {
+    margin-top: 2%;
+}.card li{
+    padding: 1%;
+}
+#ncol{
+    color: #BFA2DB;
+}
+#icon1, #icon2, #icon3 {
+    font-size: xx-large;
+    color: white;
+    padding: 15px;
+    width: 25%;
+    border-radius: 50%;
+    background-color: #BFA2DB;
+    margin: 10% auto;
+    text-align: center;
+}
+
+#icon1:hover, #icon2:hover, #icon3:hover {
+    transform: scale(1.2);
+    background-color: #FFD8A9;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+.recentwork {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 3%;
+    margin: 5%;
+    border-radius: 30px;
+    box-shadow: 0 0 5px 5px hsl(0, 0%, 0%,0.2);
+}
+
+.con1 {
+    display: flex;
+    margin: 4%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.project {
+    position: relative;
+    width: 40%;
+    min-height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.project::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--bg-image) center/cover no-repeat;
+    filter: blur(6px) brightness(0.85);
+    transform: scale(1.1); 
+    z-index: 0;
+}
+
+.overlay {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.35); 
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+.overlay a{
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+}
+.overlay h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.overlay button {
+    padding: 15px 25px;
+    background: linear-gradient(135deg, #ff5555, #9f5d00);
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 0 33%;
+}
+
+.overlay button:hover {
+    background: linear-gradient(135deg, #9f5d00, #ff5555);
+    transform: translateY(10px);
+    box-shadow: 0 5px 15px rgba(255, 206, 93, 0.5);
+    transform: scale(1.1);
+} 
+.overlay button:active{
+    transform: scale(0.8);
+    box-shadow: none;
+}
+
+.footer {
+    display: flex;
+    border-top: 2px solid #EBD4CB;
+    background-color: #1A1A1A;
+    padding: 40px 5%;
+    padding-top: 10%;
+    justify-content: center;
+    gap: 20px;
+    color: #EBD4CB;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.floatbar{
+    display: flex;
+    background-color: #ffce5d;
+    padding: 5%;
+    justify-content: space-around;
+    font-size: xx-large;
+    margin: 0 2%;
+    border-radius: 50px;
+    transform: translateY(100px);
+    box-shadow: 2px 2px  5px 5px hsl(0, 0%, 0%,0.3);
+}
+.floatbar p{
+    font-size:x-large;
+}
+#let{
+    padding: 20px 10px;
+    border-radius: 50px;
+    border: 4px solid#0062b9;
+    box-shadow: 0 0 5px 5px hsla(0, 0%, 40%, 0.1);
+}
+#last {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#insta {
+    color: #DB7093;
+    font-size: xx-large;
+}
+#insta:hover {
+    color: #FFD8A9;
+    transform: scale(1.2);
+}
+
+#utube {
+    color: #D72638;
+    font-size: xx-large;
+}
+#utube:hover {
+    color: #FFD8A9;
+    transform: scale(1.2);
+}
+
+#fb {
+    color: #4267B2;
+    font-size: xx-large;
+}
+#fb:hover {
+    color: #7DA6F9;
+    transform: scale(1.2);
+}
+
+#linkedin {
+    color: #5A8F7B;
+    font-size: xx-large;
+}
+#linkedin:hover {
+    color: #84B59F;
+    transform: scale(1.2);
+}
+@media(max-width:860px){
+    .nav{
+        flex-direction: column;
+        height: auto;
+    }
+    #logo{
+        margin: 0;
+    }
+    .redirect{
+        margin: 0;
+    }
+    #logo{
+        margin: 0;
+        margin-left: 40%;
+        padding: 0;
+    }
+    .conatiner{
+        flex-direction: column;
+    }
+    .card{
+        width: 80%;
+        margin: 10%;
+    }
+    .hero{
+        margin-top: 70%;
+    }
+    
+}

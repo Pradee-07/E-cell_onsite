@@ -338,5 +338,17 @@ html {
     .hero{
         margin-top: 70%;
     }
-    
+     .con1{
+        flex-direction: column;
+    }
+    .floatbar{
+        flex-direction: column;
+        justify-content: space-around;
+        height: 400px;
+        text-align: center;
+    }
+    .project{
+        width: 100%;
+    }
+
 }
